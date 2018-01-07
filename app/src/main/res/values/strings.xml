@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Дорожный сбор</string>
+    <string name="app_name1">Дорожный сбор\n(Республика Беларусь)</string>
+    <string name="author">Анатолий Огурцов</string>
+    <string name="email">AnatoliOgurtsov@gmail.com</string>
+    <string name="about">О программе</string>
+    <string name="pens">Ветеран Великой Отечественной войны \nИнвалид первой или второй группы</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section4">Section 4</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="play_market">Скачать с Play Market</string>
+    <string name="util_sbor">Утилизационный сбор</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+<string name="info">
+  <b>Приложение расчета суммы дорожного сбора (налога на дороги).</b>
+  \n\n
+    Дорожный сбор – вид государственной пошлины, взимаемой при выдаче разрешения на допуск транспортного
+    средства к участию в дорожном движении.\n\n
+  <b>Нормативные правовые акты:</b>
+  \n\n -Налоговый кодекс Республики Беларусь;\n
+    -Закон Республики Беларусь от 31 декабря 2013 года № 96-З «О внесении изменений и дополнений в
+    некоторые законы Республики Беларусь по вопросам предпринимательской деятельности и налогообложения»; \n
+    - Закон Республики Беларусь от 30 декабря 2015 г. № 343-З «О внесении изменений и дополнений в
+    некоторые законы Республики Беларусь по вопросам предпринимательской деятельности и налогообложения». \n\n
+Разрешение на допуск транспортного средства к участию в дорожном движении выдается республиканским
+    унитарным сервисным предприятием «Белтехосмотр» Министерства транспорта и коммуникаций и его
+    структурными подразделениями по месту проведения государственного технического осмотра транспортного средства.\n\n
+Дорожный сбор должен быть уплачен при каждом обращении за выдачей разрешения на допуск транспортного средства к участию
+    в дорожном движении.\n\n
+Льготы по уплате дорожного сбора предусмотрены пунктами 8.38, 8.39 пункта 8 статьи 257 Налогового кодекса.\n\n
+Расчет производитя с учетом деноминации, вступившей в силу 01.07.2016 года.
+
+   </string>
+
+</resources>

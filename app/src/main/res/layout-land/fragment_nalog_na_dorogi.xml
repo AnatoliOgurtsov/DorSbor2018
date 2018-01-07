@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/whiteblue"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id = "@+id/radioGroup_FizL_UrL"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:paddingTop="20dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id = "@+id/tv_FizL"
+            android:text="ФИЗИЧЕСКОЕ ЛИЦО"
+            android:gravity="center"
+            android:layout_weight="50"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id = "@+id/tv_UrL"
+            android:text="ЮРИДИЧЕСКОЕ ЛИЦО"
+            android:gravity="center"
+            android:layout_weight="50"/>
+        </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/poloska_fiz"
+            android:layout_weight="1"
+            android:background="@color/banner"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/poloska_uyr"
+            android:layout_weight="1"
+            android:background="@color/whiteblue"
+            />
+        </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:paddingTop="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id = "@+id/tv_vyshe10"
+            android:text="10 ЛЕТ И СТАРШЕ"
+            android:gravity="center"
+            android:layout_weight="50"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id = "@+id/tv_do10"
+            android:text="ДО 10 ЛЕТ/НОВЫЙ"
+            android:gravity="center"
+            android:layout_weight="50"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/poloska_do10"
+            android:layout_weight="1"
+            android:background="@color/banner"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/poloska_vyshe10"
+            android:layout_weight="1"
+            android:background="@color/whiteblue"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+    </TextView> <!-- Пустое поле -->
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_tip_auto"
+        android:layout_gravity="center_horizontal"
+        android:spinnerMode="dialog"
+        android:background="@color/whiteblue"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+    </TextView> <!-- Пустое поле -->
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_gravity="center_horizontal"
+        android:spinnerMode="dialog"
+        android:background="@color/whiteblue"
+
+       />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pens"
+        android:textColor="@color/checkbox_text_color"
+        android:id="@+id/checkBox_pens"
+        android:paddingTop="20dp"
+        android:checked="false"
+         />
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!--==================разделитель=====================================-->
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/banner"/>
+    <!--=======================================================-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rezult"
+            android:text="РЕЗУЛЬТАТ"
+            android:textSize="20sp"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_rezult_baz"
+                android:text="РЕЗУЛЬТАТ БАЗОВОЙ"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right|bottom">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Базовая величина: "
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bazovaya_vel"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button_pres" type="color">#C5CAE9</item>
+    <item name="banner" type="color">#5E6799</item>
+    <item name="white" type="color">#FFFFFF</item>
+    <item name="black" type="color">#000000</item>
+    <item name="whiteblue" type="color">#E8EAF6</item>
+    <item name="checkbox_text_color" type="color">#818181</item>
+</resources>

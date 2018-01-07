@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="My_theme_main_activity" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:actionBarStyle" >@style/My_action_Bar</item>
+        <item name="android:typeface">sans</item>
+
+
+        <!-- support lib -->
+        <item name="actionBarStyle">@style/My_action_Bar</item>
+
+    </style>
+
+
+    <!-- ActionBar Styles -->
+    <style name="My_action_Bar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/color_actionbar</item>
+
+        <!-- support lib -->
+        <item name="background">@drawable/color_actionbar</item>
+
+
+        <item name="android:titleTextStyle" >@style/My_action_Bar_title_text</item>
+        <!-- support lib -->
+        <item name="titleTextStyle" >@style/My_action_Bar_title_text</item>
+
+    </style>
+     <!-- ActionBar title Text -->
+    <style name="My_action_Bar_title_text" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/whiteblue</item>
+
+
+    </style>
+
+
+    <style name="my_dialog_noactionBar" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        <!--<item name="android:textColor">@color/white</item>-->
+        <item name="android:typeface">sans</item>
+        <item name="android:background">@color/whiteblue</item>
+    </style>
+
+
+
+
+</resources>

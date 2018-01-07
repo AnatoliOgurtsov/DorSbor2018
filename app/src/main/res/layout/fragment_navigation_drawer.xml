@@ -1,0 +1,158 @@
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/whiteblue"
+         >
+
+       <!-- <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="18"
+            android:layout_gravity="right"
+            android:background="@drawable/banner_temp"
+            >
+
+        </FrameLayout> -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/image_NND"
+                    android:src="@drawable/ic_nalog_na_dorogi"
+                    android:scaleType="center"
+                    android:layout_gravity="left"
+                    android:paddingLeft="16dp"
+                    />
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tv2"
+            android:text="Дорожный сбор"
+            android:tag="Dor_sbor"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="72dp"
+            android:textSize="14sp"
+            android:background="@drawable/button_press"
+            >
+        </TextView>
+            </FrameLayout>
+        </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/banner"
+    />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           >
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:orientation="horizontal">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:id="@+id/image_OP"
+                   android:src="@drawable/ic_action_good"
+                   android:scaleType="center"
+                   android:layout_gravity="left"
+                   android:paddingLeft="16dp"
+                   />
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:id="@+id/tv5"
+               android:text="Оценить приложение"
+               android:tag="Ocenit_prilozh"
+               android:gravity="left|center_vertical"
+               android:paddingLeft="72dp"
+               android:textSize="14sp"
+               android:background="@drawable/button_press"
+               />
+
+           </FrameLayout>
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:id="@+id/image_About"
+                   android:src="@drawable/ic_action_help"
+                   android:scaleType="center"
+                   android:layout_gravity="left"
+                   android:paddingLeft="16dp"
+                   />
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:id="@+id/tv6"
+               android:text="О программе"
+               android:tag="About"
+               android:gravity="left|center_vertical"
+               android:paddingLeft="72dp"
+               android:textSize="14sp"
+               android:background="@drawable/button_press"/>
+           </FrameLayout>
+           </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/banner"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/play_market"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/banner"
+            android:paddingTop="5dp"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/image_US"
+                android:src="@drawable/ic_util_sbor"
+                android:scaleType="center"
+                android:layout_gravity="left"
+                android:paddingLeft="16dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/tv7"
+                android:text="@string/util_sbor"
+                android:tag="Util_sbor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="72dp"
+                android:textSize="14sp"
+                android:background="@drawable/button_press"/>
+        </FrameLayout>
+
+
+   </LinearLayout>
