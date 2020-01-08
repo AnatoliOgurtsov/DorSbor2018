@@ -1,13 +1,12 @@
 package by.a_ogurtsov.dorsbor;
 
 
-
 import android.app.Activity;
-import android.view.View.OnClickListener;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
@@ -56,16 +55,19 @@ public class Fragment_info extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View v = inflater.inflate(R.layout.info, container, false);
         bt_OK = (Button)v.findViewById(R.id.button);
         onClickListener = new OnClickListener() {
@@ -80,9 +82,6 @@ public class Fragment_info extends Fragment {
 
 
         return v;
-
-
-
     }
 
     @Override

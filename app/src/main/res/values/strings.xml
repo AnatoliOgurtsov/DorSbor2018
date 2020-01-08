@@ -3,28 +3,24 @@
     <string name="app_name1">Дорожный сбор\n(Республика Беларусь)</string>
     <string name="author">Анатолий Огурцов</string>
     <string name="email">AnatoliOgurtsov@gmail.com</string>
-    <string name="about">О программе</string>
-    <string name="pens">Ветеран Великой Отечественной войны \nИнвалид первой или второй группы</string>
-
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="title_section4">Section 4</string>
+    <string name="about">О приложении</string>
+    <string name="pens">ветеран Великой Отечественной войны \nинвалид 1 или 2 группы</string>
+    <string name="info_nav">Информация</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
-    <string name="action_search">Search</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_search">Поиск</string>
+    <string name="action_settings">Настройки</string>
     <string name="play_market">Скачать с Play Market</string>
     <string name="util_sbor">Утилизационный сбор</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
-<string name="info">
+    <string name="info">
   <b>Приложение расчета суммы дорожного сбора (налога на дороги).</b>
   \n\n
     Дорожный сбор – вид государственной пошлины, взимаемой при выдаче разрешения на допуск транспортного
@@ -44,5 +40,7 @@
 Расчет производитя с учетом деноминации, вступившей в силу 01.07.2016 года.
 
    </string>
+    <string name="setting_font">\uf1de</string>
+    <string name="settings">Настройки</string>
 
 </resources>

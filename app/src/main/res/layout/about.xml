@@ -29,9 +29,5 @@
         android:layout_height="wrap_content"
         android:text="@string/email"
         android:textSize="15sp" />
-        <!--android:textColor="@color/banner"-->
-
-
-
 
 </LinearLayout>

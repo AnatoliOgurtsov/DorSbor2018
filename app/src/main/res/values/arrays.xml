@@ -38,7 +38,15 @@
         <item>прицеп-дача</item>
     </string-array>
 
-
+    <string-array name="themes">
+        <item>стандартная</item>
+        <item>зеленая</item>
+        <item>голубая</item>
+        <item>оранжевая</item>
+        <item>серая</item>
+        <item>бело-красная</item>
+        <item>красно-зеленая</item>
+    </string-array>
 
 
 </resources>

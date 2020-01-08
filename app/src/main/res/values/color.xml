@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <!--стандартная тема-->
     <item name="button_pres" type="color">#C5CAE9</item>
     <item name="banner" type="color">#5E6799</item>
     <item name="white" type="color">#FFFFFF</item>
     <item name="black" type="color">#000000</item>
     <item name="whiteblue" type="color">#E8EAF6</item>
-    <item name="checkbox_text_color" type="color">#818181</item>
+    <item name="checkbox_text_color" type="color">#757575</item>
+
+    <!--стандартная тема-->
+    <color name="primary_base">#5E6799</color>
+    <color name="primary_dark_base">#5E6799</color>
+    <color name="primary_light_base">#E8EAF6</color>
+    <color name="accent_base">#818181</color>
+    <color name="primary_text_base">#212121</color>
+    <color name="secondary_text_base">#757575</color>
+    <color name="icons_base">#FFFFFF</color>
+    <color name="divider_base">#BDBDBD</color>
+
+
+    <!--голубая тема-->
+    <color name="primary_blue">#3F51B5</color>
+    <color name="primary_dark_blue">#303F9F</color>
+    <color name="primary_light_blue">#C5CAE9</color>
+    <color name="accent_blue">#03A9F4</color>
+    <color name="primary_text_blue">#212121</color>
+    <color name="secondary_text_blue">#757575</color>
+    <color name="icons_blue">#FFFFFF</color>
+    <color name="divider_blue">#BDBDBD</color>
+
+    <!--оранжевая тема-->
+    <color name="primary_orange">#FF9800</color>
+    <color name="primary_dark_orange">#F57C00</color>
+    <color name="primary_light_orange">#FFE0B2</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="primary_text_orange">#212121</color>
+    <color name="secondary_text_orange">#757575</color>
+    <color name="icons_orange">#212121</color>
+    <color name="divider_orange">#BDBDBD</color>
+
+    <!--серая тема-->
+    <color name="primary_grey">#607D8B</color>
+    <color name="primary_dark_grey">#455A64</color>
+    <color name="primary_light_grey">#CFD8DC</color>
+    <color name="accent_grey">#9E9E9E</color>
+    <color name="primary_text_grey">#212121</color>
+    <color name="secondary_text_grey">#757575</color>
+    <color name="icons_grey">#FFFFFF</color>
+    <color name="divider_grey">#BDBDBD</color>
+
+    <!--зеленая тема-->
+    <color name="primary_green">#4CAF50</color>
+    <color name="primary_dark_green">#388E3C</color>
+    <color name="primary_light_green">#C8E6C9</color>
+    <color name="accent_green">#8BC34A</color>
+    <color name="primary_text_green">#212121</color>
+    <color name="secondary_text_green">#757575</color>
+    <color name="icons_green">#FFFFFF</color>
+    <color name="divider_green">#BDBDBD</color>
+
+    <!--бело-красная тема-->
+    <color name="primary_wr">#ff0000</color>
+    <color name="primary_dark_wr">#ff0000</color>
+    <color name="primary_light_wr">#ffffff</color>
+    <color name="accent_wr">#ff0000</color>
+    <color name="primary_text_wr">#212121</color>
+    <color name="secondary_text_wr">#757575</color>
+    <color name="icons_wr">#FFFFFF</color>
+    <color name="divider_wr">#BDBDBD</color>
+
+    <!--красно-зеленая тема-->
+    <color name="primary_rg">#0f973a</color>
+    <color name="primary_dark_rg">#38734a</color>
+    <color name="primary_light_rg">#f9eda1a1</color>
+    <color name="accent_rg">#085e23</color>
+    <color name="primary_text_rg">#000000</color>
+    <color name="secondary_text_rg">#757575</color>
+    <color name="icons_rg">#FFFFFF</color>
+    <color name="divider_rg">#BDBDBD</color>
+
+
+
 </resources>
+
+
+

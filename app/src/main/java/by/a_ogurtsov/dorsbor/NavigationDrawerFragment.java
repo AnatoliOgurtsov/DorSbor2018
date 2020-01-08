@@ -45,6 +45,7 @@ public class NavigationDrawerFragment extends Fragment {
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
+    private TextView separator1, downloadFromPlaymarket;
 
     public NavigationDrawerFragment() {
     }
@@ -91,12 +92,19 @@ public class NavigationDrawerFragment extends Fragment {
         View v = inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
 
-        TextView tv2 = (TextView) v.findViewById(R.id.tv2);
+        separator1 = (TextView) v.findViewById(R.id.separator1);
+        separator1.setBackgroundColor(Utils.getThemeColor(getActivity(), R.attr.colorPrimary));
+        downloadFromPlaymarket = (TextView)v.findViewById(R.id.downloadFromPlaymarket);
+        downloadFromPlaymarket.setTextColor(Utils.getThemeColor(getActivity(), R.attr.colorPrimary));
+
+        TextView tv3 = (TextView) v.findViewById(R.id.tv3);
+        TextView tv4 = (TextView) v.findViewById(R.id.tv4);
         TextView tv5 = (TextView) v.findViewById(R.id.tv5);
         TextView tv6 = (TextView) v.findViewById(R.id.tv6);
         TextView tv7 = (TextView) v.findViewById(R.id.tv7);
 
-        tv2.setOnClickListener(ocltv);
+        tv3.setOnClickListener(ocltv);
+        tv4.setOnClickListener(ocltv);
         tv5.setOnClickListener(ocltv);
         tv6.setOnClickListener(ocltv);
         tv7.setOnClickListener(ocltv);

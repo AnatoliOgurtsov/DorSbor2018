@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:textAppearance">@style/ToolbarTextColor</item>
+        <item name="theme">@style/ToolbarTextColor</item>
+    </style>
+
+    <style name="ToolbarTextColor" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+
+    </style>
+
+    <style name="TextColor">
+        <item name="android:textColor">@color/primary_text_base</item>
+    </style>
+
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+</resources>

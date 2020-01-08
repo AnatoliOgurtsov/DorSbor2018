@@ -1,10 +1,11 @@
 package by.a_ogurtsov.dorsbor;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.annotation.ColorInt;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,16 +39,18 @@ public class Fragment_nalog_na_dorogi extends Fragment {
     int FIS_UYR, vid_TS, massa_TS, vozrast_TS, pens;
 
 
-    final Double bazovaya_vel = 24.5;
-    SharedPreferences spref;
+    final Double bazovaya_vel = Utils.bazovaya_vel;
+    int poloskaColorActiv;
+    int poloskaColorNonActiv;
 
     Integer b_v;
     String itog_sum, itog_b;
     final String LOG_TAG = "myLogs";
+    final String STATE = "States";
     private Spinner spinner_TS, spinner_massa;
     MySimpleAdapter adapter_temp, adapter_tip_auto, adapter_mas_legk_fiz, adapter_mas_legk_uyr, adapter_mas_gruz, adapter_mas_bus, adapter_mas_pritcep;
     RadioGroup rgroup_fiz_uyr; //rgroup_vozrast;
-    TextView itog, itog_baz, fiz, uyr, poloska_fiz, poloska_uyr, do10, posle10, poloska_do10, poloska_posle10, baz_vel;
+    TextView itog, itog_baz, fiz, uyr, poloska_fiz, poloska_uyr, do10, posle10, poloska_do10, poloska_posle10, baz_vel, tv_pensioner;
     CheckBox cbox_pensioner;
     OnClickListener radiolistener;
     OnCheckedChangeListener pensionerlistener;
@@ -71,7 +74,10 @@ public class Fragment_nalog_na_dorogi extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(LOG_TAG, "onCreate_Fragment_nalog_na_dorogi");
+        poloskaColorActiv = Utils.getThemeColor(getActivity(), R.attr.colorPrimary);
+        poloskaColorNonActiv = Utils.getThemeColor(getActivity(), android.R.attr.colorBackground);
+
+        Log.d(STATE, "onCreate_Fragment_nalog_na_dorogi");
 
         if (savedInstanceState != null){
             FIS_UYR = savedInstanceState.getInt("FIS_UYR");
@@ -217,17 +223,16 @@ public class Fragment_nalog_na_dorogi extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, final Bundle savedInstanceState) {
-        Log.d(LOG_TAG, "onCreateView_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onCreateView_Fragment_nalog_na_dorogi");
         View v = inflater.inflate(R.layout.fragment_nalog_na_dorogi, container,false);
         baz_vel = (TextView)v.findViewById(R.id.bazovaya_vel);
         baz_vel.setText(MyClass.check_ruble(bazovaya_vel));
 
 
-
         spinner_TS = (Spinner) v.findViewById(R.id.spinner_tip_auto);
         spinner_TS.setAdapter(adapter_tip_auto);
-        spinner_massa = (Spinner) v.findViewById(R.id.spinner2);
 
+        spinner_massa = (Spinner) v.findViewById(R.id.spinner2);
 
 
         itog = (TextView) v.findViewById(R.id.tv_rezult);
@@ -247,28 +252,33 @@ public class Fragment_nalog_na_dorogi extends Fragment {
         poloska_posle10 = (TextView) v.findViewById(R.id.poloska_vyshe10);
 
         cbox_pensioner = (CheckBox) v.findViewById(R.id.checkBox_pens);
+        tv_pensioner = (TextView) v.findViewById(R.id.tv_pens);
 //============================================================================================
         //===================данные при повороте====================
         switch (FIS_UYR){
             case 0:
-                poloska_fiz.setBackgroundColor(getResources().getColor(R.color.banner));
-                poloska_uyr.setBackgroundColor(getResources().getColor(R.color.whiteblue));
+                poloska_fiz.setBackgroundColor(poloskaColorActiv);
+                poloska_uyr.setBackgroundColor(poloskaColorNonActiv);
+                //poloska_fiz.setBackgroundColor(getResources().getColor(R.color.banner));
+                //poloska_uyr.setBackgroundColor(getResources().getColor(R.color.whiteblue));
                 cbox_pensioner.setVisibility(View.VISIBLE);
+                tv_pensioner.setVisibility(View.VISIBLE);
             break;
             case 1:
-                poloska_fiz.setBackgroundColor(getResources().getColor(R.color.whiteblue));
-                poloska_uyr.setBackgroundColor(getResources().getColor(R.color.banner));
+                poloska_fiz.setBackgroundColor(poloskaColorNonActiv);
+                poloska_uyr.setBackgroundColor(poloskaColorActiv);
                 cbox_pensioner.setVisibility(View.GONE);
+                tv_pensioner.setVisibility(View.GONE);
                 break;
         }
         switch (vozrast_TS){
             case 1:
-                poloska_do10.setBackgroundColor(getResources().getColor(R.color.banner));
-                poloska_posle10.setBackgroundColor(getResources().getColor(R.color.whiteblue));
+                poloska_do10.setBackgroundColor(poloskaColorActiv);
+                poloska_posle10.setBackgroundColor(poloskaColorNonActiv);
                 break;
             case 2:
-                poloska_do10.setBackgroundColor(getResources().getColor(R.color.whiteblue));
-                poloska_posle10.setBackgroundColor(getResources().getColor(R.color.banner));
+                poloska_do10.setBackgroundColor(poloskaColorNonActiv);
+                poloska_posle10.setBackgroundColor(poloskaColorActiv);
                 break;
         }
 //============================================================================================
@@ -281,10 +291,11 @@ public class Fragment_nalog_na_dorogi extends Fragment {
                     case (R.id.tv_FizL):
                         FIS_UYR = 0;
 
-                        poloska_fiz.setBackgroundColor(getResources().getColor(R.color.banner));
-                        poloska_uyr.setBackgroundColor(getResources().getColor(R.color.whiteblue));
+                        poloska_fiz.setBackgroundColor(poloskaColorActiv);
+                        poloska_uyr.setBackgroundColor(poloskaColorNonActiv);
                         cbox_pensioner.setVisibility(View.VISIBLE);
                         cbox_pensioner.setChecked(false);
+                        tv_pensioner.setVisibility(View.VISIBLE);
 
 
                         if (vid_TS == 0) {
@@ -297,10 +308,11 @@ public class Fragment_nalog_na_dorogi extends Fragment {
                         break;
                     case (R.id.tv_UrL):
                         FIS_UYR = 1;
-                        poloska_fiz.setBackgroundColor(getResources().getColor(R.color.whiteblue));
-                        poloska_uyr.setBackgroundColor(getResources().getColor(R.color.banner));
+                        poloska_fiz.setBackgroundColor(poloskaColorNonActiv);
+                        poloska_uyr.setBackgroundColor(poloskaColorActiv);
                         cbox_pensioner.setChecked(false);
                         cbox_pensioner.setVisibility(View.GONE);
+                        tv_pensioner.setVisibility(View.GONE);
                         pens = 1;
 
 
@@ -316,8 +328,8 @@ public class Fragment_nalog_na_dorogi extends Fragment {
                         Log.d(LOG_TAG, "Good2");
                         vozrast_TS = 1;
 
-                        poloska_do10.setBackgroundColor(getResources().getColor(R.color.banner));
-                        poloska_posle10.setBackgroundColor(getResources().getColor(R.color.whiteblue));
+                        poloska_do10.setBackgroundColor(poloskaColorActiv);
+                        poloska_posle10.setBackgroundColor(poloskaColorNonActiv);
                         itog(FIS_UYR,vid_TS,massa_TS,vozrast_TS,pens);
 
                         break;
@@ -325,8 +337,8 @@ public class Fragment_nalog_na_dorogi extends Fragment {
                         Log.d(LOG_TAG, "Good1");
                         vozrast_TS = 2;
 
-                        poloska_do10.setBackgroundColor(getResources().getColor(R.color.whiteblue));
-                        poloska_posle10.setBackgroundColor(getResources().getColor(R.color.banner));
+                        poloska_do10.setBackgroundColor(poloskaColorNonActiv);
+                        poloska_posle10.setBackgroundColor(poloskaColorActiv);
                         itog(FIS_UYR,vid_TS,massa_TS,vozrast_TS,pens);
 
                         break;
@@ -805,18 +817,18 @@ private String sclonenie (Integer n){
 
     public void onDestroy() {
         super.onDestroy();
-        Log.d(LOG_TAG, "onDestroy_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onDestroy_Fragment_nalog_na_dorogi");
     }
 
     public void onPause() {
         super.onPause();
-        Log.d(LOG_TAG, "onPause_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onPause_Fragment_nalog_na_dorogi");
     }
 
 
     public void onResume() {
         super.onResume();
-        Log.d(LOG_TAG, "onResume_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onResume_Fragment_nalog_na_dorogi");
     }
 
     public void onSaveInstanceState(Bundle outState) {
@@ -827,24 +839,24 @@ private String sclonenie (Integer n){
         outState.putInt("VOZRAST_TS", vozrast_TS);
         outState.putInt("PENS", pens);
 
-        Log.d(LOG_TAG, "onSaveInstanceState_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onSaveInstanceState_Fragment_nalog_na_dorogi");
     }
 
     @Override
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
 
-        Log.d(LOG_TAG, "onViewStateRestored_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onViewStateRestored_Fragment_nalog_na_dorogi");
     }
 
     public void onStart() {
         super.onStart();
-        Log.d(LOG_TAG, "onStart_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onStart_Fragment_nalog_na_dorogi");
     }
 
     public void onStop() {
         super.onStop();
-        Log.d(LOG_TAG, "onStop_Fragment_nalog_na_dorogi");
+        Log.d(STATE, "onStop_Fragment_nalog_na_dorogi");
     }
 
 class MySimpleAdapter extends SimpleAdapter{

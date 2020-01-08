@@ -1,44 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="My_theme_main_activity" parent="Theme.AppCompat.Light.DarkActionBar">
-    <item name="android:actionBarStyle" >@style/My_action_Bar</item>
+
+    <style name="my_dialog_noactionBar" parent="@android:style/Theme.Holo.Light.Dialog.MinWidth">
         <item name="android:typeface">sans</item>
-
-
-        <!-- support lib -->
-        <item name="actionBarStyle">@style/My_action_Bar</item>
-
-    </style>
-
-
-    <!-- ActionBar Styles -->
-    <style name="My_action_Bar" parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">@drawable/color_actionbar</item>
-
-        <!-- support lib -->
-        <item name="background">@drawable/color_actionbar</item>
-
-
-        <item name="android:titleTextStyle" >@style/My_action_Bar_title_text</item>
-        <!-- support lib -->
-        <item name="titleTextStyle" >@style/My_action_Bar_title_text</item>
-
-    </style>
-     <!-- ActionBar title Text -->
-    <style name="My_action_Bar_title_text" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/whiteblue</item>
-
-
-    </style>
-
-
-    <style name="my_dialog_noactionBar" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
-        <!--<item name="android:textColor">@color/white</item>-->
-        <item name="android:typeface">sans</item>
-        <item name="android:background">@color/whiteblue</item>
+        <item name="android:background">@color/secondary_text_base</item>
+        <item name="android:textColor">@color/primary_light_base</item>
     </style>
 
 
 
+    <!--==================================НОВАЯ РЕДАКЦИЯ ТЕМ=====================================-->
+
+    <style name="DorSbor_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:alertDialogTheme">@style/ThemeListPreferences</item>
+    </style>
+
+
+    <style name="ThemeListPreferences" parent="@android:style/Theme.Holo.Dialog.MinWidth">
+        <item name="android:windowBackground">@color/secondary_text_base</item>
+        <item name="android:alertDialogStyle">@style/ListPrefAlertDialogStyle</item>
+        <item name="android:textColorAlertDialogListItem">@color/white</item>
+
+    </style>
+
+
+    <style name="ListPrefAlertDialogStyle">
+        <item name="android:fullDark"    >@android:color/transparent</item>
+        <item name="android:topDark"     >@android:color/transparent</item>
+        <item name="android:centerDark"  >@android:color/transparent</item>
+        <item name="android:bottomDark"  >@android:color/transparent</item>
+        <item name="android:fullBright"  >@android:color/transparent</item>
+        <item name="android:topBright"   >@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+    </style>
+
+    <!--стандартная тема-->
+    <style name="DorSbor_theme_base" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_base</item>
+        <item name="colorPrimaryDark">@color/primary_dark_base</item>
+        <item name="colorAccent">@color/accent_base</item>
+        <item name="android:textColorPrimary">@color/primary_text_base</item>
+        <item name="android:textColorSecondary">@color/secondary_text_base</item>
+        <item name="android:icon">@color/icons_base</item>
+        <item name="android:colorBackground">@color/primary_light_base</item>
+    </style>
+
+    <!--голубая тема-->
+    <style name="DorSbor_theme_blue" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/primary_dark_blue</item>
+        <item name="colorAccent">@color/accent_blue</item>
+        <item name="android:textColorPrimary">@color/primary_text_blue</item>
+        <item name="android:textColorSecondary">@color/secondary_text_blue</item>
+        <item name="android:icon">@color/icons_blue</item>
+        <item name="android:colorBackground">@color/primary_light_blue</item>
+    </style>
+
+    <!--оранжевая тема-->
+    <style name="DorSbor_theme_orange" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_orange</item>
+        <item name="colorPrimaryDark">@color/primary_dark_orange</item>
+        <item name="colorAccent">@color/accent_orange</item>
+        <item name="android:textColorPrimary">@color/primary_text_orange</item>
+        <item name="android:textColorSecondary">@color/secondary_text_orange</item>
+        <item name="android:icon">@color/icons_blue</item>
+        <item name="android:colorBackground">@color/primary_light_orange</item>
+    </style>
+
+    <!--серая тема-->
+    <style name="DorSbor_theme_grey" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_grey</item>
+        <item name="colorPrimaryDark">@color/primary_dark_grey</item>
+        <item name="colorAccent">@color/accent_grey</item>
+        <item name="android:textColorPrimary">@color/primary_text_grey</item>
+        <item name="android:textColorSecondary">@color/secondary_text_grey</item>
+        <item name="android:icon">@color/icons_grey</item>
+        <item name="android:colorBackground">@color/primary_light_grey</item>
+    </style>
+
+    <!--зеленая тема-->
+    <style name="DorSbor_theme_green" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorPrimaryDark">@color/primary_dark_green</item>
+        <item name="colorAccent">@color/accent_green</item>
+        <item name="android:textColorPrimary">@color/primary_text_green</item>
+        <item name="android:textColorSecondary">@color/secondary_text_green</item>
+        <item name="android:icon">@color/icons_green</item>
+        <item name="android:colorBackground">@color/primary_light_green</item>
+    </style>
+
+    <!--бело-красная тема-->
+    <style name="DorSbor_theme_wr" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_wr</item>
+        <item name="colorPrimaryDark">@color/primary_dark_wr</item>
+        <item name="colorAccent">@color/accent_wr</item>
+        <item name="android:textColorPrimary">@color/primary_text_wr</item>
+        <item name="android:textColorSecondary">@color/secondary_text_wr</item>
+        <item name="android:icon">@color/icons_wr</item>
+        <item name="android:colorBackground">@color/primary_light_wr</item>
+    </style>
+
+    <!--красно-зеленая тема-->
+    <style name="DorSbor_theme_rg" parent="DorSbor_theme">
+        <item name="colorPrimary">@color/primary_rg</item>
+        <item name="colorPrimaryDark">@color/primary_dark_rg</item>
+        <item name="colorAccent">@color/accent_rg</item>
+        <item name="android:textColorPrimary">@color/primary_text_rg</item>
+        <item name="android:textColorSecondary">@color/secondary_text_rg</item>
+        <item name="android:icon">@color/icons_rg</item>
+        <item name="android:colorBackground">@color/primary_light_rg</item>
+    </style>
 
 </resources>

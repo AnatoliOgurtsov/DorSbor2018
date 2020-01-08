@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    android:background="@color/whiteblue">
+    android:background="?android:attr/colorBackground"
+    >
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,14 +20,16 @@
             android:id = "@+id/tv_FizL"
             android:text="ФИЗИЧЕСКОЕ ЛИЦО"
             android:gravity="center"
-            android:layout_weight="50"/>
+            android:layout_weight="50"
+            style="@style/TextColor"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id = "@+id/tv_UrL"
             android:text="ЮРИДИЧЕСКОЕ ЛИЦО"
             android:gravity="center"
-            android:layout_weight="50"/>
+            android:layout_weight="50"
+            style="@style/TextColor"/>
         </RadioGroup>
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,14 +41,14 @@
             android:layout_height="match_parent"
             android:id="@+id/poloska_fiz"
             android:layout_weight="1"
-            android:background="@color/banner"
+
             />
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/poloska_uyr"
             android:layout_weight="1"
-            android:background="@color/whiteblue"
+
             />
         </LinearLayout>
 
@@ -62,14 +65,16 @@
             android:id = "@+id/tv_vyshe10"
             android:text="10 ЛЕТ И СТАРШЕ"
             android:gravity="center"
-            android:layout_weight="50"/>
+            android:layout_weight="50"
+            style="@style/TextColor"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id = "@+id/tv_do10"
             android:text="ДО 10 ЛЕТ/НОВЫЙ"
             android:gravity="center"
-            android:layout_weight="50"/>
+            android:layout_weight="50"
+            style="@style/TextColor"/>
     </RadioGroup>
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,14 +85,14 @@
             android:layout_height="match_parent"
             android:id="@+id/poloska_do10"
             android:layout_weight="1"
-            android:background="@color/banner"
+
             />
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/poloska_vyshe10"
             android:layout_weight="1"
-            android:background="@color/whiteblue"
+
             />
     </LinearLayout>
     <TextView
@@ -100,8 +105,8 @@
         android:id="@+id/spinner_tip_auto"
         android:layout_gravity="center_horizontal"
         android:spinnerMode="dialog"
-        android:background="@color/whiteblue"
-        />
+        android:background="?android:attr/colorBackground"
+        style="@style/TextColor"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp">
@@ -113,19 +118,42 @@
         android:id="@+id/spinner2"
         android:layout_gravity="center_horizontal"
         android:spinnerMode="dialog"
-        android:background="@color/whiteblue"
+        android:background="?android:attr/colorBackground"
+        style="@style/TextColor"/>
 
-       />
-    <CheckBox
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pens"
-        android:textColor="@color/checkbox_text_color"
-        android:id="@+id/checkBox_pens"
-        android:paddingTop="30dp"
-        android:checked="false"
-        />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center">
+        <CheckBox
+            android:id="@+id/checkBox_pens"
+            style="@style/TextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:checked="false"
+            />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_pens"
+            style="@style/TextColor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="left|center_vertical"
+            android:text="@string/pens"
+            android:textSize="14sp"/>
+
+
+    </LinearLayout>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"  >
@@ -141,6 +169,7 @@
             android:id="@+id/tv_rezult"
             android:text="РЕЗУЛЬТАТ"
             android:textSize="20sp"
+            style="@style/TextColor"
             />
             <TextView
                 android:layout_width="wrap_content"
@@ -148,6 +177,7 @@
                 android:id="@+id/tv_rezult_baz"
                 android:text="РЕЗУЛЬТАТ БАЗОВОЙ"
                 android:textSize="10sp"
+                style="@style/TextColor"
                 />
 
         </LinearLayout>
@@ -160,13 +190,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Базовая величина: "
-                android:textSize="10sp"/>
+                android:textSize="10sp"
+                style="@style/TextColor"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/bazovaya_vel"
                 android:textSize="10sp"
+                style="@style/TextColor"
                 />
 
         </LinearLayout>
